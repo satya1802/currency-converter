@@ -2,6 +2,106 @@
 openapi: 3.1.0
 info:
   title: currency converter
-  version: architecture-v0
+  version: architecture-v2
   description: Designed API from the approved architecture (not extracted from code).
-paths: {}
+paths:
+  /api/currencies:
+    get:
+      summary: Returns the full ISO 4217 fiat currency list with code and name where
+        available, for the from/to pickers.
+      description: Returns the full ISO 4217 fiat currency list with code and name
+        where available, for the from/to pickers.
+      operationId: get_api_currencies
+      parameters: []
+      responses:
+        '200':
+          description: '[ { code: ''USD'', name: ''US Dollar'' }, ... ]'
+      security:
+      - bearerAuth: []
+  /api/geo-default:
+    get:
+      summary: Optional. Resolves the visitor's country from their IP via ipinfo and
+        returns a suggested default from-currency, default
+      description: Optional. Resolves the visitor's country from their IP via ipinfo
+        and returns a suggested default from-currency, defaulting to USD when unavailable.
+      operationId: get_api_geo_default
+      parameters: []
+      responses:
+        '200':
+          description: '{ default_from: ''EUR'' }'
+      security:
+      - bearerAuth: []
+  /api/health:
+    get:
+      summary: Liveness and cache-status check for operations.
+      description: Liveness and cache-status check for operations.
+      operationId: get_api_health
+      parameters: []
+      responses:
+        '200':
+          description: '{ status: ''ok'', cache: ''hit|miss'', last_updated: ISO8601
+            }'
+  /api/rates:
+    get:
+      summary: Returns the cached rate map (base plus per-currency rates) and the
+        last-updated timestamp for client-side conversion. Se
+      description: Returns the cached rate map (base plus per-currency rates) and
+        the last-updated timestamp for client-side conversion. Serves from Redis,
+        falls back to the Postgres snapshot.
+      operationId: get_api_rates
+      parameters: []
+      responses:
+        '200':
+          description: '{ base: ''USD'', rates: { EUR: 0.92, ... }, updated_at: ISO8601
+            }'
+      security:
+      - bearerAuth: []
+  /internal/refresh:
+    post:
+      summary: Triggers an immediate rate refresh from Open Exchange Rates. Called
+        by the hourly scheduler. Not exposed publicly.
+      description: Triggers an immediate rate refresh from Open Exchange Rates. Called
+        by the hourly scheduler. Not exposed publicly.
+      operationId: post_internal_refresh
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              description: none
+      responses:
+        '200':
+          description: '{ refreshed: true, updated_at: ISO8601 }'
+      security:
+      - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    rate_snapshot:
+      type: object
+      properties:
+        id:
+          type: integer
+        base_currency:
+          type: string
+        rates:
+          type: string
+        fetched_at:
+          type: string
+          format: date-time
+        source:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+      required:
+      - id
+      - base_currency
+      - rates
+      - fetched_at
+      - source
+      - created_at

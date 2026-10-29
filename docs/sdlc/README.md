@@ -5,7 +5,7 @@
 <!-- sdlc:auto:start overview -->
 currrency cinverter
 
-**Documentation version:** v1
+**Documentation version:** v2
 <!-- sdlc:auto:end overview -->
 
 ## Contents
@@ -14,14 +14,14 @@ currrency cinverter
 | Document | State |
 |---|---|
 | [Requirements](requirements/README.md) | v1 approved |
-| [Architecture](architecture/README.md) | 1 entry |
+| [Architecture](architecture/README.md) | 13 entries |
 | [Development](development/README.md) | 1 entry |
 | [Testing](testing/README.md) | 1 entry |
 | [Deployment](deployment/README.md) | 1 entry |
 | [Maintenance](maintenance/README.md) | 1 entry |
-| [Data model](architecture/data-model.md) | not generated yet |
-| [API (OpenAPI)](architecture/api/openapi.yaml) | not generated yet |
-| [Decisions (ADRs)](architecture/adr/README.md) | 0 decisions |
+| [Data model](architecture/data-model.md) | generated |
+| [API (OpenAPI)](architecture/api/openapi.yaml) | generated |
+| [Decisions (ADRs)](architecture/adr/README.md) | 4 decisions |
 | [Sprint plan](development/sprint-plan.md) | not generated yet |
 | [Developer guide](development/developer-guide.md) | not generated yet |
 | [API reference](development/api-reference.md) | 0 routes |
@@ -31,7 +31,7 @@ currrency cinverter
 | [Runbook](deployment/runbook.md) | not deployed yet |
 | [Release notes](deployment/release-notes.md) | 0 releases |
 | [Traceability matrix](traceability-matrix.md) | 11 requirements |
-| [Changelog](CHANGELOG.md) | 1 version |
+| [Changelog](CHANGELOG.md) | 2 versions |
 <!-- sdlc:auto:end contents -->
 
 ## Open gaps
@@ -43,7 +43,9 @@ currrency cinverter
 
 ### Architecture
 
-- Architecture phase has not started: no design artifacts, screen list, API contracts, or data model have been produced yet.
+- No mapping provided between this architecture and specific requirement IDs (US-001..US-011); traceability to individual requirements could not be confirmed.
+- Behavior when ipinfo is unavailable is described at the endpoint level (defaults to USD) but not at the component level; confirm this is the sole fallback behavior.
+- Technology rationale references NFR-001 and NFR-004, but these identifiers are not present in the known requirement key list (US-001..US-011); their source/definition is unconfirmed and should be reconciled with the requirements phase documentation.
 
 ### Development
 

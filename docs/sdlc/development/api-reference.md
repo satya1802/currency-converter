@@ -7,7 +7,13 @@ _No routes found._
 <!-- sdlc:auto:end endpoints -->
 
 <!-- sdlc:auto:start drift -->
-_Code matches the designed API._
+**Designed but missing:**
+
+- GET /api/currencies
+- GET /api/geo-default
+- GET /api/health
+- GET /api/rates
+- POST /internal/refresh
 <!-- sdlc:auto:end drift -->
 
 <!-- sdlc:auto:start source -->

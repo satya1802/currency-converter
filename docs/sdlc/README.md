@@ -5,7 +5,7 @@
 <!-- sdlc:auto:start overview -->
 currrency cinverter
 
-**Documentation version:** v3
+**Documentation version:** v4
 <!-- sdlc:auto:end overview -->
 
 ## Contents
@@ -15,7 +15,7 @@ currrency cinverter
 |---|---|
 | [Requirements](requirements/README.md) | v1 approved |
 | [Architecture](architecture/README.md) | 13 entries |
-| [Development](development/README.md) | 18 entries |
+| [Development](development/README.md) | 7 entries |
 | [Testing](testing/README.md) | 1 entry |
 | [Deployment](deployment/README.md) | 1 entry |
 | [Maintenance](maintenance/README.md) | 1 entry |
@@ -31,7 +31,7 @@ currrency cinverter
 | [Runbook](deployment/runbook.md) | not deployed yet |
 | [Release notes](deployment/release-notes.md) | 0 releases |
 | [Traceability matrix](traceability-matrix.md) | 11 requirements |
-| [Changelog](CHANGELOG.md) | 3 versions |
+| [Changelog](CHANGELOG.md) | 4 versions |
 <!-- sdlc:auto:end contents -->
 
 ## Open gaps
@@ -49,19 +49,15 @@ currrency cinverter
 
 ### Development
 
-- No record of actual sprint execution, ticket status (in-progress/done), code commits, or pull requests -- only the approved plan was provided.
-- No dates given for plan approval or sprint start/end.
-- Sprint-to-story assignment is inferred from goal wording, not explicitly stated per item; confirm actual sprint assignment.
-- No execution status (completed/in-progress) reported for this sprint.
-- Sprint-to-story assignment is inferred, not explicitly stated per item; confirm actual sprint assignment.
-- No execution status reported for this sprint.
-- No implementation or completion evidence for this epic's child stories.
-- No implementation status, code, or test evidence provided for this story.
-- No implementation status for the story or either subtask (endpoint, dropdown component).
-- No implementation status or test evidence provided.
-- No implementation status for the story or its three subtasks (client/fetch service, persistence, fallback/error handling).
-- No implementation status (e.g., scheduled job configured) or evidence of the hourly refresh running.
-- No implementation or verification status provided (role assignment to qa-agent suggests this may be a verification task rather than a build task, but that is not stated explicitly).
+- No record of actual sprint execution: no ticket status (e.g. in-progress/done), code commits, pull requests, or completion dates were provided for any item.
+- Cannot confirm whether any sprint has started, is in progress, or has completed delivery of its stated goal.
+- Item-to-sprint assignment is inferred from goal wording, not explicitly stated in the input -- needs confirmation.
+- No completion or progress status reported for Sprint 1.
+- No completion or progress status reported for Sprint 2.
+- No completion or progress status reported for Sprint 3.
+- No completion status, implementation detail, or test evidence provided for any item in this epic.
+- No information on Open Exchange Rates integration credentials, rate limits, or error-handling approach.
+- US-010 is assigned to qa-agent rather than a build role, suggesting it may be verification-only; input does not clarify whether anonymous access is implemented elsewhere or solely verified here.
 
 ### Testing
 

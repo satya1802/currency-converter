@@ -5,7 +5,7 @@
 <!-- sdlc:auto:start overview -->
 currrency cinverter
 
-**Documentation version:** v2
+**Documentation version:** v3
 <!-- sdlc:auto:end overview -->
 
 ## Contents
@@ -15,14 +15,14 @@ currrency cinverter
 |---|---|
 | [Requirements](requirements/README.md) | v1 approved |
 | [Architecture](architecture/README.md) | 13 entries |
-| [Development](development/README.md) | 1 entry |
+| [Development](development/README.md) | 18 entries |
 | [Testing](testing/README.md) | 1 entry |
 | [Deployment](deployment/README.md) | 1 entry |
 | [Maintenance](maintenance/README.md) | 1 entry |
 | [Data model](architecture/data-model.md) | generated |
 | [API (OpenAPI)](architecture/api/openapi.yaml) | generated |
 | [Decisions (ADRs)](architecture/adr/README.md) | 4 decisions |
-| [Sprint plan](development/sprint-plan.md) | not generated yet |
+| [Sprint plan](development/sprint-plan.md) | 3 sprints |
 | [Developer guide](development/developer-guide.md) | generated |
 | [API reference](development/api-reference.md) | 1 route |
 | [Test report](testing/test-report.md) | not run yet |
@@ -31,7 +31,7 @@ currrency cinverter
 | [Runbook](deployment/runbook.md) | not deployed yet |
 | [Release notes](deployment/release-notes.md) | 0 releases |
 | [Traceability matrix](traceability-matrix.md) | 11 requirements |
-| [Changelog](CHANGELOG.md) | 2 versions |
+| [Changelog](CHANGELOG.md) | 3 versions |
 <!-- sdlc:auto:end contents -->
 
 ## Open gaps
@@ -49,7 +49,19 @@ currrency cinverter
 
 ### Development
 
-- Development phase has not started: no planning or implementation records exist to document.
+- No record of actual sprint execution, ticket status (in-progress/done), code commits, or pull requests -- only the approved plan was provided.
+- No dates given for plan approval or sprint start/end.
+- Sprint-to-story assignment is inferred from goal wording, not explicitly stated per item; confirm actual sprint assignment.
+- No execution status (completed/in-progress) reported for this sprint.
+- Sprint-to-story assignment is inferred, not explicitly stated per item; confirm actual sprint assignment.
+- No execution status reported for this sprint.
+- No implementation or completion evidence for this epic's child stories.
+- No implementation status, code, or test evidence provided for this story.
+- No implementation status for the story or either subtask (endpoint, dropdown component).
+- No implementation status or test evidence provided.
+- No implementation status for the story or its three subtasks (client/fetch service, persistence, fallback/error handling).
+- No implementation status (e.g., scheduled job configured) or evidence of the hourly refresh running.
+- No implementation or verification status provided (role assignment to qa-agent suggests this may be a verification task rather than a build task, but that is not stated explicitly).
 
 ### Testing
 

@@ -9,15 +9,15 @@ Built from recorded links, not written by a model: requirement key → plan item
 <!-- sdlc:auto:start matrix -->
 | Requirement | Epic | Title | Plan items | Sprint | Design | Code | Commits | Ticket | Tests | AC tests | Deployed |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| US-001 | EPIC-001 | Enter amount and see instant converted result | — | — | — | — | — | not started | not run | 0/4 tested · 0/4 passing | — |
-| US-002 | EPIC-001 | Select from- and to-currencies across all ISO 4217 fiat currencies | — | — | — | — | — | not started | not run | 0/3 tested · 0/3 passing | — |
-| US-003 | EPIC-001 | Swap from- and to-currencies | — | — | — | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
-| US-004 | EPIC-001 | Display the effective exchange rate | — | — | — | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
-| US-005 | EPIC-001 | Show rates last-updated timestamp and indicative-only notice | — | — | — | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
-| US-006 | EPIC-001 | Default currency pair pre-selected | — | — | — | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
-| US-007 | EPIC-002 | Retrieve live FX rates from Open Exchange Rates | — | — | — | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
-| US-008 | EPIC-002 | Refresh rates hourly | — | — | — | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
-| US-009 | EPIC-002 | Cache fetched rates in Redis | — | — | — | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
-| US-010 | EPIC-003 | Public anonymous access without login | — | — | — | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
-| US-011 | EPIC-003 | Mobile-responsive converter page | — | — | — | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
+| US-001 | EPIC-001 | Enter amount and see instant converted result | US-001 | 2 | GET /api/rates, backend, frontend, rate_snapshot | — | — | not started | not run | 0/4 tested · 0/4 passing | — |
+| US-002 | EPIC-001 | Select from- and to-currencies across all ISO 4217 fiat currencies | US-002, US-002-T1, US-002-T2 | 2 | GET /api/currencies, backend, frontend, rate_snapshot | — | — | not started | not run | 0/3 tested · 0/3 passing | — |
+| US-003 | EPIC-001 | Swap from- and to-currencies | US-003 | 3 | GET /api/rates, frontend | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
+| US-004 | EPIC-001 | Display the effective exchange rate | US-004 | 3 | GET /api/rates, frontend | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
+| US-005 | EPIC-001 | Show rates last-updated timestamp and indicative-only notice | US-005 | 3 | GET /api/rates, frontend, rate_snapshot | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
+| US-006 | EPIC-001 | Default currency pair pre-selected | US-006 | 2 | GET /api/rates, frontend | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
+| US-007 | EPIC-002 | Retrieve live FX rates from Open Exchange Rates | US-007, US-007-T1, US-007-T2, US-007-T3 | 1 | POST /internal/refresh, backend, database, fx_provider, rate_snapshot | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
+| US-008 | EPIC-002 | Refresh rates hourly | US-008 | 1 | POST /internal/refresh, backend, rate_snapshot, scheduler | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
+| US-009 | EPIC-002 | Cache fetched rates in Redis | US-009 | 1 | GET /api/rates, backend, cache, rate_snapshot | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
+| US-010 | EPIC-003 | Public anonymous access without login | US-010 | 1 | frontend | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
+| US-011 | EPIC-003 | Mobile-responsive converter page | US-011 | 3 | frontend | — | — | not started | not run | 0/2 tested · 0/2 passing | — |
 <!-- sdlc:auto:end matrix -->
